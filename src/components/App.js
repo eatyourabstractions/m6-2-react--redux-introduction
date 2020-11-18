@@ -5,6 +5,8 @@ import Logo from './Logo';
 import ItemGrid from './ItemGrid';
 import GlobalStyles from './GlobalStyles';
 
+import Cart from './Cart'
+
 const App = () => {
   return (
     <Wrapper>
@@ -14,14 +16,22 @@ const App = () => {
       <ItemGridWrapper>
         <ItemGrid />
       </ItemGridWrapper>
-
+      <CartWrapper>
+        <Cart/>
+      </CartWrapper>
       <GlobalStyles />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  position: relative;
+  /* position: relative; */
+  display: grid;
+  grid-template-areas: 
+    'header header header header sidebar sidebar sidebar'
+    'main main main main sidebar sidebar sidebar'
+    'main main main main sidebar sidebar sidebar'
+
 `;
 
 const Header = styled.header`
